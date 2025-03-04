@@ -2809,20 +2809,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 400
---- !u!114 &1603692251
+--- !u!114 &1603692256 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2582045227996666932, guid: 7c7a394fde037704da8ddea675737da9, type: 3}
+  m_PrefabInstance: {fileID: 1757180007178749124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603692243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c192a1da4dd03d4e81124308d9a3b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1603692258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603692243}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 983f4222187bc784a9c27bf5e2c84cd4, type: 3}
-  m_NotificationBehavior: 0
+  m_Actions: {fileID: -944628639613478452, guid: 278f17fe61d6d4e49949f431f377b993, type: 3}
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -2833,10 +2844,26 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1603692256}
+        m_TargetAssemblyTypeName: Mover, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 599718c9-6f1d-4d05-a881-89a4b5fad9bd
+    m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: New Control Scheme
-  m_DefaultActionMap: player
+  m_DefaultControlScheme: Player
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1001 &1651883987
@@ -4016,7 +4043,7 @@ PrefabInstance:
       addedObject: {fileID: 1603692250}
     - targetCorrespondingSourceObject: {fileID: 5437729232132933646, guid: 7c7a394fde037704da8ddea675737da9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1603692251}
+      addedObject: {fileID: 1603692258}
   m_SourcePrefab: {fileID: 100100000, guid: 7c7a394fde037704da8ddea675737da9, type: 3}
 --- !u!1001 &2117684709599958626
 PrefabInstance:
