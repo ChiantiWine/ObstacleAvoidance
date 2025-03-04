@@ -1,11 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 
 public class Flyatplayer : MonoBehaviour
 {
-    [Header("Default Settings")]
+    [Header("기본 설정")]
     [SerializeField] float speed = 0.01f;
     [SerializeField] Transform player;
+    // [SerializeField] float delay = 0f;
     Vector3 playerPosition;
 
     void Awake()
@@ -15,31 +17,41 @@ public class Flyatplayer : MonoBehaviour
     void Start()
     {
         playerPosition = player.transform.position;
+        // StartCoroutine(WaitDelay());
     }
 
 
     void Update()
-    { 
-        MoveToPlayer();
+    {
+         MoveToPlayer();
         DestoryWhenReached();
     }
 
-    
+    // IEnumerator WaitDelay()
+    // {
+    //     yield return new WaitForSeconds(delay);
+        
+    //      gameObject.SetActive(true);
+
+        
+
+    // }
+
 
     void MoveToPlayer()
     {
         transform.position = Vector3.MoveTowards(transform.position, playerPosition, Time.deltaTime * speed);
     }
 
-    
+
 
     void DestoryWhenReached()
     {
         if (transform.position == playerPosition)
-        
+
         {
 
-        Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
