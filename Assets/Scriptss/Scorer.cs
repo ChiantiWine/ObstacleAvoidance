@@ -4,6 +4,7 @@ using UnityEngine;
 public class Scorer : MonoBehaviour
 {
     [Tooltip("점수")]
+    [Range(1, 3)]
     [SerializeField] int Hits = 2;
    
     void OnCollisionEnter(Collision other)
