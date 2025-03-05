@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Dropper : MonoBehaviour
 {
-    
     [SerializeField] float timeToWait = 3f;
 
     MeshRenderer meshRenderer;
@@ -13,7 +12,6 @@ public class Dropper : MonoBehaviour
         rb.useGravity = false;
         meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.enabled = false;
-
     }
     void Update()
     {
@@ -25,9 +23,7 @@ public class Dropper : MonoBehaviour
         if (Time.time >= timeToWait)
         {
             meshRenderer.enabled = true;
-            rb.useGravity = true;
-            
+            rb.useGravity = true; 
         }
     }
-
 }

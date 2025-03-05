@@ -6,10 +6,6 @@ public class Mover : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     Vector2 movement;
 
-    void Start()
-    {
-        Debug.Log("Mover script started");
-    }
     void Update()
     {
         // MovePlayer();
@@ -30,10 +26,10 @@ public class Mover : MonoBehaviour
         transform.Translate(move);
     }
 
+    // CallbackContext
     public void OnMove(InputAction.CallbackContext callbackContext)
     {
         movement = callbackContext.ReadValue<Vector2>();
-         Debug.Log("Movement Input: " + movement); 
     }    
 }
 
